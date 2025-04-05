@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any', '.*');
